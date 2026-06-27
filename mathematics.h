@@ -3,6 +3,27 @@
 #if defined (MATHEMATICS_CORE)
 
 const double NAN = 0.0/0.0;
+const double +INFINITY = 1.0/0.0;
+
+double isnan(double x) 
+{
+    if (x == NAN) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+double isinf(double x)
+{
+    if (x == INFINITY) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+
 
 #endif
 
@@ -26,6 +47,18 @@ double mod(double x)
     }
 
     return NAN;
+}
+
+double copysign(double x)
+{
+    if (x > 0) {
+        return -x;
+    } else if (x == 0) {
+        // this is coz technically -0.0 n +0.0 are different in IEEE floats although they are equal but give different value of infinite (super useful ik)
+        return 0;
+    } else {
+        return x;
+    }
 }
 
 double min(double x, double y)
@@ -78,7 +111,7 @@ double clamp(double value, double lowerLimit, double upperLimit)
 
 /*
     note for myself on pointers
-    the reason the function takes 
+    the reason the function takes
     pointes to x n y as defined
     in input n not variables is
     coz its referencing the x n
@@ -112,6 +145,16 @@ void swap(double *x, double *y)
     *x = temp;
 }
 
+// only integer factorial since factorial for doubles requires "gamma function"
+unsigned int factorial(unsigned int x)
+{
+    if (x == 0) {
+        return 1;
+    } else {
+        // TODO: impl integer factorials
+    }
+}
+
 
 #endif
 
@@ -129,7 +172,7 @@ double ln2log(double lnx)
 
 double deg2rad(double degAngle)
 {
-   return degAngle * (PI/180); 
+   return degAngle * (PI/180);
 }
 
 double rad2deg(double radAngle)
