@@ -8,12 +8,11 @@
 
 int main()
 {
-    double x = PI;
+    double x = 10;
+    double y = 20;
 
-    if (clamp(x, 1.0, 3.0) == 1) {
-        printf("true");
-    } else {
-    printf("not true");
-    }
-    
+    printf("Pre-swap values: %.15f %.15f\n", x, y);
+    swap(&x, &y);
+    printf("Post-swap values: %.15f %.15f\n", x, y);    
+
 }

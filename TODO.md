@@ -1,13 +1,15 @@
 ```
-mod  [done]       - Returns absolute value.
-min  [done]         - Returns smaller value.
-max  [done]         - Returns larger value.
-clamp  [done]       - Restricts value to range.
-sign  [done]        - Returns sign of number.
+mod    [done]        - Returns absolute value.
+min    [done]        - Returns smaller value.
+max    [done]        - Returns larger value.
+clamp  [done]        - Restricts value to range.
+sign   [done]        - Returns sign of number.
 swap        - Swaps two values.
 
 deg2rad     - Degrees to radians.
 rad2deg     - Radians to degrees.
+log2ln      - Log to Ln
+ln2log      - Ln to Log
 lerp        - Linear interpolation.
 smoothstep  - Smooth interpolation.
 

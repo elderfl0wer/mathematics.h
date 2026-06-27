@@ -76,7 +76,14 @@ double clamp(double value, double lowerLimit, double upperLimit)
  //   return NAN
 }
 
-
+// why is the input pointers ? also just why.
+void swap(double *x, double *y)
+{
+    double temp;
+    temp = *y;
+    *y = *x;
+    *x = temp;
+}
 
 
 
