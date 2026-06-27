@@ -127,4 +127,14 @@ double ln2log(double lnx)
     return lnx / LN10;
 }
 
+double deg2rad(double degAngle)
+{
+   return degAngle * (PI/180); 
+}
+
+double rad2deg(double radAngle)
+{
+    return radAngle * (180/PI);
+}
+
 #endif
