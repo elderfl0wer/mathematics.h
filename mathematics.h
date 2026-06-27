@@ -2,8 +2,6 @@
 
 #if defined (MATHEMATICS_CORE)
 
-#define
-
 const double NAN = 0.0/0.0;
 
 #endif
@@ -23,13 +21,9 @@ double mod(double x)
 {
     if (x >= 0) {
         return x;
-    } else if (x < 0) {
+    } else {
         return -x;
     }
-    else {
-        return NAN;
-    }
-
 }
 
 double min(double x, double y)
@@ -39,10 +33,38 @@ double min(double x, double y)
     } else {
         if (x > y) {
             return y;
-        } else (
+        } else {
             return x;
-        )
+        }
     }
 }
+
+double max(double x, double y)
+{
+    if (x == y) {
+        return NAN;
+    } else {
+        if (x > y) {
+            return x;
+        } else {
+            return y;
+        }
+    }
+}
+
+double sign(double x)
+{
+    if (x > 0) {
+        return 1.0;
+    } else if (x < 0) {
+        return -1.0;
+    } else {
+        return 0.0;
+    }
+}
+
+
+
+
 
 #endif
