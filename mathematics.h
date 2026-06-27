@@ -32,4 +32,17 @@ double mod(double x)
 
 }
 
+double min(double x, double y)
+{
+    if (x == y) {
+        return NAN;
+    } else {
+        if (x > y) {
+            return y;
+        } else (
+            return x;
+        )
+    }
+}
+
 #endif
