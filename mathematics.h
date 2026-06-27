@@ -76,7 +76,34 @@ double clamp(double value, double lowerLimit, double upperLimit)
  //   return NAN
 }
 
-// why is the input pointers ? also just why.
+/*
+    note for myself on pointers
+    the reason the function takes 
+    pointes to x n y as defined
+    in input n not variables is
+    coz its referencing the x n
+    y created outside the function
+    that need to be swapped, if
+    I did swap(int x, int y), IM
+    making 2 new variables x n y
+    that only exist inside swap
+    and die after swap ends
+    not changing the x n y in the
+    main function i.e. 2 different
+    sets of variables with the
+    same name sets.
+
+    What I inferred
+
+    void swap(double x, double y)
+    {
+        double temp;
+        temp = y;
+        y = x;
+        x = temp;
+    }
+
+*/
 void swap(double *x, double *y)
 {
     double temp;
@@ -86,5 +113,18 @@ void swap(double *x, double *y)
 }
 
 
+#endif
+
+#if defined (MATHEMATICS_CONVERSIONS)
+
+double log2ln(double logx)
+{
+    return logx * LN10;
+}
+
+double ln2log(double lnx)
+{
+    return lnx / LN10;
+}
 
 #endif

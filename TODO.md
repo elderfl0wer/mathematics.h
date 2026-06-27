@@ -4,7 +4,7 @@ min    [done]        - Returns smaller value.
 max    [done]        - Returns larger value.
 clamp  [done]        - Restricts value to range.
 sign   [done]        - Returns sign of number.
-swap        - Swaps two values.
+swap   [done]        - Swaps two values.
 
 deg2rad     - Degrees to radians.
 rad2deg     - Radians to degrees.
