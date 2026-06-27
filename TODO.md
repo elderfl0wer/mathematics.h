@@ -1,9 +1,9 @@
 ```
 mod  [done]       - Returns absolute value.
-min         - Returns smaller value.
-max         - Returns larger value.
-clamp       - Restricts value to range.
-sign        - Returns sign of number.
+min  [done]         - Returns smaller value.
+max  [done]         - Returns larger value.
+clamp  [done]       - Restricts value to range.
+sign  [done]        - Returns sign of number.
 swap        - Swaps two values.
 
 deg2rad     - Degrees to radians.

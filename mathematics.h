@@ -24,6 +24,8 @@ double mod(double x)
     } else {
         return -x;
     }
+
+    return NAN;
 }
 
 double min(double x, double y)
@@ -61,6 +63,17 @@ double sign(double x)
     } else {
         return 0.0;
     }
+}
+
+double clamp(double value, double lowerLimit, double upperLimit)
+{
+    if (value >= lowerLimit && value <= upperLimit) {
+        return 1;
+    } else {
+        return 0;
+    }
+
+ //   return NAN
 }
 
 

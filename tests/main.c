@@ -8,6 +8,12 @@
 
 int main()
 {
-    printf("%.15f", NAN);
+    double x = PI;
+
+    if (clamp(x, 1.0, 3.0) == 1) {
+        printf("true");
+    } else {
+    printf("not true");
+    }
     
 }
