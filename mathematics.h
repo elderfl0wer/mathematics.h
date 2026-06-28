@@ -2,22 +2,27 @@
 
 #if defined (MATHEMATICS_CORE)
 
+// Is it better to make these macros rather then variables ?
 const double NAN = 0.0/0.0;
-const double +INFINITY = 1.0/0.0;
+const double posINFINITY = 1.0/0.0;
+const double negINFINITY = 1.0/-0.0;
 
-double isnan(double x) 
+double isnan(double *x)
 {
-    if (x == NAN) {
+    if (*x == NAN) {
         return 1;
     } else {
         return 0;
     }
 }
 
+// 0 : non-inf, 1 : +ive inf, -1 : -ve inf
 double isinf(double x)
 {
-    if (x == INFINITY) {
+    if (x == posINFINITY) {
         return 1;
+    } else if (x == negINFINITY) {
+        return -1;
     } else {
         return 0;
     }
@@ -29,6 +34,7 @@ double isinf(double x)
 
 #if defined (MATHEMATICS_CONSTANTS)
 
+// Is it better to make these macros rather then variables ?
 const double PI = 3.14159265358979;
 const double E = 2.718281828459045;
 const double LN10 = 2.302585092994046;
@@ -49,7 +55,14 @@ double mod(double x)
     return NAN;
 }
 
-double copysign(double x)
+// changed name copysign--->swapsign due to windows not compiling
+/*
+lld-link: error: duplicate symbol: copysign
+>>> defined at C:\Users\userdirectoryname\AppData\Local\Temp\main-eeb26b.o
+>>> defined at libucrt.lib(copysign.obj)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+*/
+double swapsign(double x)
 {
     if (x > 0) {
         return -x;
@@ -151,7 +164,7 @@ unsigned int factorial(unsigned int x)
     if (x == 0) {
         return 1;
     } else {
-        // TODO: impl integer factorials
+        return 0;
     }
 }
 

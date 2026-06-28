@@ -9,11 +9,12 @@
 
 int main()
 {
-    double x = 10;
-    double y = 20;
 
-    printf("Pre-swap values: %.15f %.15f\n", x, y);
-    swap(&x, &y);
-    printf("Post-swap values: %.15f %.15f\n", x, y);    
+    double x = NAN;
 
+    if (isnan(&x) == 0) {
+        printf("Is NaN");
+    } else {
+    printf("Is not nan");
+    }
 }
