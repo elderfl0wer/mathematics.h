@@ -7,9 +7,28 @@ const double NAN = 0.0/0.0;
 const double posINFINITY = 1.0/0.0;
 const double negINFINITY = 1.0/-0.0;
 
-double isnan(double *x)
+/*
+    Previous implmentation compared x
+    to NAN (x == NAN) and returned 1
+    or 0 but NAN cant be compared to
+    anything not even itself in IEEE
+    754, then it clicked that since
+    (NAN != NAN) is always true hence
+    if a variable is NAN it must not
+    be equal to itself.
+
+double isnan(double x)
 {
-    if (*x == NAN) {
+    if (x == NAN) {
+        return 1; <---- will never return 1 since no numbert cant be compared to NAN
+    } else {
+        return 0; 
+    }
+}
+*/
+double isnan(double x)
+{
+    if (x != x) {
         return 1;
     } else {
         return 0;
@@ -20,11 +39,11 @@ double isnan(double *x)
 double isinf(double x)
 {
     if (x == posINFINITY) {
-        return 1;
+        return 0;
     } else if (x == negINFINITY) {
         return -1;
     } else {
-        return 0;
+        return 1;
     }
 }
 

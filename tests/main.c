@@ -10,11 +10,11 @@
 int main()
 {
 
-    double x = NAN;
+    double x = 0.0;
 
-    if (isnan(&x) == 0) {
-        printf("Is NaN");
+    if (isnan(NAN) == 1) {
+        printf("NAN is NAN");
     } else {
-    printf("Is not nan");
+        printf("NAN isn't NAN");
     }
 }
