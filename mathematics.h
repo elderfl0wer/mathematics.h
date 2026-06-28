@@ -178,13 +178,26 @@ void swap(double *x, double *y)
 }
 
 // only integer factorial since factorial for doubles requires "gamma function"
+/*
 unsigned int factorial(unsigned int x)
 {
     if (x == 0) {
         return 1;
     } else {
-        return 0;
+        // TODO: impl integer factorial
     }
+}
+*/
+
+void m_trunc(double *x)
+{
+    int temp;
+    double cache;
+    
+    cache = *x;
+    temp = (int)(*x);
+    cache = (double)temp;
+    *x = cache;
 }
 
 

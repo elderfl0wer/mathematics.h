@@ -9,12 +9,9 @@
 
 int main()
 {
+    double ex = PI;
 
-    double x = 0.0;
-
-    if (isnan(NAN) == 1) {
-        printf("NAN is NAN");
-    } else {
-        printf("NAN isn't NAN");
-    }
+    printf("Pre-truncation: %.15f\n", ex);
+    truncate(&ex);
+    printf("Post-truncation: %.15f\n", ex);
 }

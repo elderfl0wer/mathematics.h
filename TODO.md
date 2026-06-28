@@ -1,15 +1,15 @@
 ```
-mod     [done]        - Returns absolute value.
-min     [done]        - Returns smaller value.
-max     [done]        - Returns larger value.
-clamp   [done]        - Restricts value to range.
-sign    [done]        - Returns sign of number.
-swap    [done]        - Swaps two values.
+mod      [done]        - Returns absolute value.
+min      [done]        - Returns smaller value.
+max      [done]        - Returns larger value.
+clamp    [done]        - Restricts value to range.
+sign     [done]        - Returns sign of number.
+swap     [done]        - Swaps two values.
 
-deg2rad [done]        - Degrees to radians.
-rad2deg [done]        - Radians to degrees.
-log2ln  [done]        - Log to Ln
-ln2log  [done]        - Ln to Log
+deg2rad  [done]        - Degrees to radians.
+rad2deg  [done]        - Radians to degrees.
+log2ln   [done]        - Log to Ln
+ln2log   [done]        - Ln to Log
 lerp        - Linear interpolation.
 smoothstep  - Smooth interpolation.
 
@@ -25,9 +25,9 @@ round       - Rounds to nearest integer.
 frac        - Returns fractional part.
 
 fmod        - Floating-point remainder.
-copysign    - Magnitude with another sign.
-isnan       - Checks for NaN.
-isinf       - Checks for infinity.
+swapsign [done]        - Magnitude with another sign.
+isnan    [done]        - Checks for NaN.
+isinf    [done]        - Checks for infinity.
 
 sqrt        - Square root.
 cbrt        - Cube root.
