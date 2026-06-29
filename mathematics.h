@@ -1,8 +1,8 @@
 // I have no idea what i am doing
-/* #define MATHEMATICS_CORE
+#define MATHEMATICS_CORE
 #define MATHEMATICS_CONSTANTS
 #define MATHEMATICS_FUNCTIONS
-#define MATHEMATICS_CONVERSIONS */
+#define MATHEMATICS_CONVERSIONS
 #if defined (MATHEMATICS_CORE)
 
 // Is it better to make these macros rather then variables ?
@@ -201,6 +201,18 @@ void m_floor(double *x)
     } else {
     m_trunc(x);
     *x -= 1;
+    }
+}
+
+void m_ceil(double *x)
+{
+    if (*x > 0) {
+        m_trunc(x);
+        *x += 1;
+    }  else if (*x == 1) {
+        *x += 1;
+    } else {
+        m_trunc(x);
     }
 }
 

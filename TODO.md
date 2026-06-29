@@ -18,8 +18,8 @@ factorial   - Product from 1 to n.
 gcd         - Greatest common divisor.
 lcm         - Least common multiple.
 
-floor       - Largest integer below x.
-ceil        - Smallest integer above x.
+floor    [done]         - Largest integer below x.
+ceil     [done]         - Smallest integer above x.
 trunc    [done]         - Removes fractional part.
 round       - Rounds to nearest integer.
 frac        - Returns fractional part.
