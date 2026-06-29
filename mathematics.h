@@ -1,8 +1,8 @@
 // I have no idea what i am doing
-#define MATHEMATICS_CORE
-#define MATHEMATICS_CONSTANTS
-#define MATHEMATICS_FUNCTIONS
-#define MATHEMATICS_CONVERSIONS
+// #define MATHEMATICS_CORE
+// #define MATHEMATICS_CONSTANTS
+// #define MATHEMATICS_FUNCTIONS
+// #define MATHEMATICS_CONVERSIONS
 #if defined (MATHEMATICS_CORE)
 
 // Is it better to make these macros rather then variables ?
@@ -25,7 +25,7 @@ double isnan(double x)
     if (x == NAN) {
         return 1; <---- will never return 1 since no numbert cant be compared to NAN
     } else {
-        return 0; 
+        return 0;
     }
 }
 */
@@ -185,7 +185,7 @@ void m_trunc(double *x)
 {
     int temp;
     double cache;
-    
+
     cache = *x;
     temp = (int)(*x);
     cache = (double)temp;
@@ -214,6 +214,32 @@ void m_ceil(double *x)
     } else {
         m_trunc(x);
     }
+}
+
+void m_round(double x)
+{
+    return;
+}
+
+/*
+ *  It seems you cant call a function in return ?
+ *  Got current impl from C discord
+ *
+ double m_fmod(double dividend, double divisor)
+ {
+     // x/y == dividend/divisor
+     int n = dividend/divisor;
+
+     return m_trunc(&(dividend - (n * divisor)));
+}
+ */
+double m_fmod(double dividend, double divisor)
+{
+    int n = dividend - divisor;
+
+    double d = dividend - n*divisor;
+    m_trunc(&d); // thank u fupa master
+    return d;
 }
 
 
