@@ -1,5 +1,8 @@
 // I have no idea what i am doing
-
+/* #define MATHEMATICS_CORE
+#define MATHEMATICS_CONSTANTS
+#define MATHEMATICS_FUNCTIONS
+#define MATHEMATICS_CONVERSIONS */
 #if defined (MATHEMATICS_CORE)
 
 // Is it better to make these macros rather then variables ?
@@ -39,11 +42,11 @@ double isnan(double x)
 double isinf(double x)
 {
     if (x == posINFINITY) {
-        return 0;
+        return 1;
     } else if (x == negINFINITY) {
         return -1;
     } else {
-        return 1;
+        return 0;
     }
 }
 
@@ -132,13 +135,13 @@ double sign(double x)
 
 double clamp(double value, double lowerLimit, double upperLimit)
 {
-    if (value >= lowerLimit && value <= upperLimit) {
-        return 1;
+    if (value > lowerLimit && value < upperLimit) {
+        return value;
+    } else if (value >= lowerLimit) {
+        return lowerLimit;
     } else {
-        return 0;
+        return upperLimit;
     }
-
- //   return NAN
 }
 
 /*
@@ -177,17 +180,6 @@ void swap(double *x, double *y)
     *x = temp;
 }
 
-// only integer factorial since factorial for doubles requires "gamma function"
-/*
-unsigned int factorial(unsigned int x)
-{
-    if (x == 0) {
-        return 1;
-    } else {
-        // TODO: impl integer factorial
-    }
-}
-*/
 
 void m_trunc(double *x)
 {
@@ -198,6 +190,18 @@ void m_trunc(double *x)
     temp = (int)(*x);
     cache = (double)temp;
     *x = cache;
+}
+
+void m_floor(double *x)
+{
+    if (*x > 0) {
+        m_trunc(x);
+    } else if (*x == 0) {
+        return;
+    } else {
+    m_trunc(x);
+    *x -= 1;
+    }
 }
 
 

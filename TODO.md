@@ -20,7 +20,7 @@ lcm         - Least common multiple.
 
 floor       - Largest integer below x.
 ceil        - Smallest integer above x.
-trunc       - Removes fractional part.
+trunc    [done]         - Removes fractional part.
 round       - Rounds to nearest integer.
 frac        - Returns fractional part.
 

@@ -9,9 +9,11 @@
 
 int main()
 {
-    double ex = PI;
+    double ex = 3.14;
+    double xe = -4.1;
 
-    printf("Pre-truncation: %.15f\n", ex);
-    truncate(&ex);
-    printf("Post-truncation: %.15f\n", ex);
+    printf("Pre-floor: %f %f\n", ex, xe);
+    m_floor(&ex);
+    m_floor(&xe);
+    printf("Post-floor: %f %f\n", ex, xe);
 }
