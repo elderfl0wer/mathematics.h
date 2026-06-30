@@ -24,7 +24,7 @@ trunc    [done]         - Removes fractional part.
 round       - Rounds to nearest integer.
 frac        - Returns fractional part.
 
-fmod        - Floating-point remainder.
+fmod     [done]        - Floating-point remainder.
 swapsign [done]        - Magnitude with another sign.
 isnan    [done]        - Checks for NaN.
 isinf    [done]        - Checks for infinity.

@@ -222,6 +222,13 @@ void m_round(double x)
     return;
 }
 
+double frac(double x)
+{
+    double frac = x;
+    m_trunc(&frac);
+    return (x-frac);
+}
+
 /*
  *  It seems you cant call a function in return ?
  *  Got current impl from C discord
@@ -236,7 +243,7 @@ void m_round(double x)
  */
 double m_fmod(double dividend, double divisor)
 {
-    int n = dividend - divisor;
+    int n = dividend / divisor;
 
     double d = dividend - n*divisor;
     m_trunc(&d); // thank u fupa master
