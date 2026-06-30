@@ -22,7 +22,7 @@ floor    [done]         - Largest integer below x.
 ceil     [done]         - Smallest integer above x.
 trunc    [done]         - Removes fractional part.
 round       - Rounds to nearest integer.
-frac        - Returns fractional part.
+frac     [done]         - Returns fractional part.
 
 fmod     [done]        - Floating-point remainder.
 swapsign [done]        - Magnitude with another sign.

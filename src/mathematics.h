@@ -1,5 +1,6 @@
 // I have no idea what i am doing
 // THIS IS THE DEV FILE REFER TO `include/mathematics.h`
+#include <cmath>
 #define MATHEMATICS_CORE
 #define MATHEMATICS_CONSTANTS
 #define MATHEMATICS_FUNCTIONS
@@ -217,9 +218,20 @@ void m_ceil(double *x)
     }
 }
 
-void m_round(double x)
+void m_round(double *x)
 {
-    return;
+    double y = *x;
+    m_trunc(&y);
+    double z = *x - y;
+
+    if (z > 0.5) {
+        m_trunc(x);
+        x += 1;
+    } else if (*x == 0) {
+        return;
+    } else {
+        m_trunc(x);
+    }
 }
 
 double frac(double x)
@@ -230,8 +242,9 @@ double frac(double x)
 }
 
 /*
- *  It seems you cant call a function in return ?
- *  Got current impl from C discord
+ *  The term (&(dividend - n*divisor)) causes ambiguity
+ *  as C doesnt know which variable is being dereferenced
+ *  hence throws an error which is why this code didnt work.
  *
  double m_fmod(double dividend, double divisor)
  {
