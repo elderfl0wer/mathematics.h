@@ -1,8 +1,9 @@
 // I have no idea what i am doing
-// #define MATHEMATICS_CORE
-// #define MATHEMATICS_CONSTANTS
-// #define MATHEMATICS_FUNCTIONS
-// #define MATHEMATICS_CONVERSIONS
+// THIS IS THE DEV FILE REFER TO `include/mathematics.h`
+#define MATHEMATICS_CORE
+#define MATHEMATICS_CONSTANTS
+#define MATHEMATICS_FUNCTIONS
+#define MATHEMATICS_CONVERSIONS
 #if defined (MATHEMATICS_CORE)
 
 // Is it better to make these macros rather then variables ?
