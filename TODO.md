@@ -21,7 +21,7 @@ lcm         - Least common multiple.
 floor    [done]         - Largest integer below x.
 ceil     [done]         - Smallest integer above x.
 trunc    [done]         - Removes fractional part.
-round       - Rounds to nearest integer.
+round    [done]         - Rounds to nearest integer.
 frac     [done]         - Returns fractional part.
 
 fmod     [done]        - Floating-point remainder.

@@ -1,6 +1,5 @@
 // I have no idea what i am doing
 // THIS IS THE DEV FILE REFER TO `include/mathematics.h`
-#include <cmath>
 #define MATHEMATICS_CORE
 #define MATHEMATICS_CONSTANTS
 #define MATHEMATICS_FUNCTIONS
@@ -41,7 +40,7 @@ double isnan(double x)
 }
 
 // 0 : non-inf, 1 : +ive inf, -1 : -ve inf
-double isinf(double x)
+double inf(double x)
 {
     if (x == posINFINITY) {
         return 1;
@@ -218,19 +217,29 @@ void m_ceil(double *x)
     }
 }
 
+// not added to include/mathematics.h
 void m_round(double *x)
 {
     double y = *x;
     m_trunc(&y);
     double z = *x - y;
 
-    if (z > 0.5) {
-        m_trunc(x);
-        x += 1;
-    } else if (*x == 0) {
+    if (*x == 0) {
         return;
+    } else if (*x > 0) {
+        if (z > 0.5) {
+            m_trunc(x);
+            *x += 1;
+        } else {
+            m_trunc(x);
+        }
     } else {
-        m_trunc(x);
+        if (z > -0.5) {
+            m_trunc(x);
+        } else {
+            m_trunc(x);
+            *x -= 1;
+        }
     }
 }
 
